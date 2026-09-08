@@ -7,12 +7,16 @@
  */
 workspace "ref-aws-architecture-studio" "AWS Architecture Studio: ADR wizard with live preview, Mermaid diagram builder, reference patterns and AWS service catalog." {
 
+    configuration {
+        scope softwaresystem
+    }
+
     model {
         usuario = person "Usuário"
         sistema = softwareSystem "ref-aws-architecture-studio" "AWS Architecture Studio: ADR wizard with live preview, Mermaid diagram builder, reference patterns and AWS service catalog." {
             app = container "Aplicação" "Descreva o que roda aqui" "ci-node.yml"
         }
-        usuario -> sistema.app "Usa"
+        usuario -> sistema.app "Usa" "HTTPS"
     }
 
     views {
@@ -25,9 +29,19 @@ workspace "ref-aws-architecture-studio" "AWS Architecture Studio: ADR wizard wit
             autoLayout lr
         }
         styles {
-            element "Person" { shape person; background #08427b; color #ffffff }
-            element "Software System" { background #1168bd; color #ffffff }
-            element "Container" { background #438dd5; color #ffffff }
+            element "Person" {
+                shape person
+                background #08427b
+                color #ffffff
+            }
+            element "Software System" {
+                background #1168bd
+                color #ffffff
+            }
+            element "Container" {
+                background #438dd5
+                color #ffffff
+            }
         }
     }
 }
