@@ -7,8 +7,12 @@ metadata:
   description: "AWS Architecture Studio: ADR wizard with live preview, Mermaid diagram builder, reference patterns and AWS service catalog."
   annotations:
     github.com/project-slug: fernando-moretes/ref-aws-architecture-studio
-    backstage.io/source-location: url:https://github.com/fernando-moretes/ref-aws-architecture-studio
+    # URL da arvore com barra final: e dela que o TechDocs resolve `dir:.`;
+    # sem a barra ele sobe um nivel e pede api.github.com/repos/<dono> (404).
+    backstage.io/source-location: url:https://github.com/fernando-moretes/ref-aws-architecture-studio/tree/main/
     sonarqube.org/project-key: ref-aws-architecture-studio
+    # TechDocs: mkdocs.yml + docs/ do proprio repositorio (rolados pelo platform)
+    backstage.io/techdocs-ref: dir:.
   links:
     - url: https://github.com/fernando-moretes/ref-aws-architecture-studio/actions
       title: Actions
