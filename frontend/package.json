@@ -14,7 +14,7 @@
     "react-dom": "19.2.0",
     "lucide-react": "^0.454.0",
     "mermaid": "^11.4.0",
-    "react-markdown": "^9.0.1",
+    "react-markdown": "^10.1.0",
     "remark-gfm": "^4.0.0"
   },
   "devDependencies": {
